@@ -1,0 +1,23 @@
+main {
+    padding: 1rem;
+    background-color: #ffffff;
+    overflow-y: scroll;
+}
+
+main::-webkit-scrollbar-track
+{
+	border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+	background-color: #ffffff;
+}
+
+main::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #ffffff;
+}
+
+main::-webkit-scrollbar-thumb
+{
+	background-color: #000000;	
+}

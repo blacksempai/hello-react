@@ -1,0 +1,22 @@
+.Posts {
+    margin-top: 1.2rem;
+}
+
+.Posts h2 {
+    margin: 0 0 0.5rem;
+}
+
+#post {
+    width: 100%;
+    resize: none;
+}
+
+#post-submit {
+    background-color: palevioletred;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    float: right;
+}

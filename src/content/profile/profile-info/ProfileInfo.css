@@ -1,0 +1,17 @@
+.ProfileInfo {
+    display: flex;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+
+.ProfileDetails p {
+    margin: 0.2rem;
+}
+
+.ProfileDetails h2 {
+    margin-top: 0;
+}
+
+.ProfileDetails h1 {
+    margin: 0.2rem;
+}

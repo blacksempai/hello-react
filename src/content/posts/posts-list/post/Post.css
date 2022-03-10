@@ -1,0 +1,11 @@
+.Post {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.Post img {
+    height: 3rem;
+    border-radius: 50%;
+}
