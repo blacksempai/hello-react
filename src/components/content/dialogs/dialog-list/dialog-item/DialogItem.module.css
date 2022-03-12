@@ -1,0 +1,13 @@
+.dialog_item {
+    text-decoration: none;
+    color: #000000;
+}
+
+.dialog_item:hover {
+    color: palevioletred;
+}
+
+.dialog_item.active {
+    color: palevioletred;
+    font-weight: bold;
+}

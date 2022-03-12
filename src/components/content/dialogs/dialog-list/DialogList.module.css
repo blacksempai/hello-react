@@ -1,0 +1,37 @@
+.dialogs_nav {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding: 1rem;
+}
+
+.dialogs_nav::-webkit-scrollbar-track
+{
+	border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+	background-color: #ffffff;
+}
+
+.dialogs_nav::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #ffffff;
+}
+
+.dialogs_nav::-webkit-scrollbar-thumb
+{
+	background-color: #000000;	
+}
+
+.dialogs_nav * {
+    margin: 0;
+    padding: 0;
+}
+
+.dialogs_nav ul {
+    list-style: none;
+}
+
+.dialogs_nav ul li{
+    margin: 1rem 0;
+}

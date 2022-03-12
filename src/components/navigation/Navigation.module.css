@@ -18,6 +18,18 @@
     color: palevioletred;
 }
 
+.nav a.active {
+    color: palevioletred;
+}
+
 .settings {
     margin-top: 1.4rem;
+}
+
+@media only all and (max-width: 800px) {
+
+    .nav {
+      display: none;
+    }
+    
 }

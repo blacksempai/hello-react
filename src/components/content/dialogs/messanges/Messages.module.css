@@ -1,23 +1,22 @@
-.profile {
+.messanges {
     padding: 1rem;
     overflow-y: scroll;
-	overflow-x: hidden;
 }
 
-.profile::-webkit-scrollbar-track
+.messanges::-webkit-scrollbar-track
 {
 	border-right: 1px solid #000000;
     border-left: 1px solid #000000;
 	background-color: #ffffff;
 }
 
-.profile::-webkit-scrollbar
+.messanges::-webkit-scrollbar
 {
 	width: 10px;
 	background-color: #ffffff;
 }
 
-.profile::-webkit-scrollbar-thumb
+.messanges::-webkit-scrollbar-thumb
 {
 	background-color: #000000;	
 }

@@ -1,5 +1,5 @@
 import classes from './Post.module.css';
-import ava from '../../../profile/profile-info/Cat03.jpg'
+import ava from '../../../profile-info/Cat03.jpg'
 
 const Post = (props) => {
     return (

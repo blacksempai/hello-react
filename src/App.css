@@ -25,16 +25,3 @@ header {
   }
   
 }
-
-
-@media only all and (max-width: 800px) {
-
-  .Navigation {
-    display: none;
-  }
-
-  .Content {
-    grid-column: 1 / 3;
-  }
-  
-}

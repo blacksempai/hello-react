@@ -1,7 +1,7 @@
 import Post from './post/Post';
-import classes from './PostsList.module.css';
+import classes from './PostList.module.css';
 
-const PostsList = () => {
+const PostList = () => {
     return (
         <div className={classes.posts_list}>
             <Post likes="0" message=":33 OwO"/>
@@ -11,4 +11,4 @@ const PostsList = () => {
     );
 }
 
-export default PostsList;
+export default PostList;
