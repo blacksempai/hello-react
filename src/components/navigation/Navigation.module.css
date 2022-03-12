@@ -1,23 +1,23 @@
-nav {
+.nav {
     background: #000000;
     padding: 1rem 2.5rem;
 }
-nav ul {
+.nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     color: #ffffff;
     font-size: 1.4rem;
 }
 
-nav a:hover {
+.nav a:hover {
     color: palevioletred;
 }
 
-.Settings {
+.settings {
     margin-top: 1.4rem;
 }

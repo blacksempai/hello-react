@@ -1,7 +1,7 @@
 import './App.css';
-import Content from './content/Content';
-import Header from './header/Header';
-import Navigation from './navigation/Navigation'
+import Content from './components/content/Content';
+import Header from './components/header/Header';
+import Navigation from './components/navigation/Navigation'
 
 const App = () => {
   return (

@@ -1,17 +1,22 @@
-.ProfileInfo {
+.profile_info {
     display: flex;
     margin-top: 1rem;
     gap: 2rem;
 }
 
-.ProfileDetails p {
+.details p {
     margin: 0.2rem;
 }
 
-.ProfileDetails h2 {
+.details h2 {
     margin-top: 0;
 }
 
-.ProfileDetails h1 {
+.details h1 {
     margin: 0.2rem;
+}
+
+.ava {
+    width: 10rem;
+    height: 10rem;
 }

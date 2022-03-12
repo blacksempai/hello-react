@@ -1,11 +1,11 @@
-header {
+.header {
     background-color: #000000;
     text-align: left;
     padding: 0.5rem 3rem;
 }
 
 
-.App-logo {
+.logo {
     height: 5rem;
     filter: drop-shadow(4px 4px 0 #ffffff);
     pointer-events: none;

@@ -1,0 +1,21 @@
+.post {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.post p {
+    margin: 0.2rem 0;
+}
+
+.post button {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.post img {
+    height: 3rem;
+    border-radius: 50%;
+}

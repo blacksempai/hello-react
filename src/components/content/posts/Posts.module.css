@@ -1,8 +1,8 @@
-.Posts {
+.posts {
     margin-top: 1.2rem;
 }
 
-.Posts h2 {
+.posts h2 {
     margin: 0 0 0.5rem;
 }
 
@@ -11,7 +11,7 @@
     resize: none;
 }
 
-#post-submit {
+#post_submit {
     background-color: palevioletred;
     border: none;
     font-size: 1.5rem;
