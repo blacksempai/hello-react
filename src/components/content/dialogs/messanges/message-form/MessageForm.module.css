@@ -1,0 +1,31 @@
+.messageFormWrapper {
+    position: relative;
+    background-color: #ffffff;
+    bottom: 0;
+}
+
+.messageFormWrapper form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+}
+
+.messageField {
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0 2px 0;
+    outline: none;
+}
+
+.sendButton {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.sendButton img {
+    height: 100%;
+}
