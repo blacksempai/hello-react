@@ -9,6 +9,7 @@
 #post {
     width: 100%;
     resize: none;
+    padding: 0.5rem;
 }
 
 #post_submit {

@@ -5,8 +5,8 @@ import Messanges from './messanges/Messages';
 const Dialogs = (props) => {
     return (
         <div className={classes.dialogs_grid}>
-            <DialogList />
-            <Messanges data={props.data}/>
+            <DialogList dialogs={props.state.dialogs}/>
+            <Messanges messanges={props.state.messanges}/>
         </div>
     );
 }

@@ -4,17 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-
-let data = [
-  {author:"Anya", content:"Hi!"},
-  {author:"Andrey", content:"Hello!"},
-  {author:"Andrey", content:"How Are U?"}
-]
+import state from './state';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App data={data} />
+      <App state={state} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
