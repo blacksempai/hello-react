@@ -1,11 +1,11 @@
 import classes from './Messages.module.css';
 import Messange from './message/Message';
 
-const Messanges = () => {
+const Messanges = (props) => {
+    let messangeItems = props.data.map(msg => <Messange author={msg.author} content={msg.content} />);
     return (
         <div className={classes.messanges}>
-           <Messange author="Andriy" content="Hello!" />
-           <Messange author="Anya" content="Hi!" />
+            {messangeItems}
         </div>
     ); 
 }

@@ -3,12 +3,12 @@ import classes from './Content.module.css';
 import Profile from './profile/Profile';
 import Dialogs from './dialogs/Dialogs';
 
-const Content = () => {
+const Content = (props) => {
     return (
         <main className={classes.main}>
             <Routes>
                 <Route path="/profile" element={<Profile />}/>
-                <Route path="/dialogs/*" element={<Dialogs />}/>
+                <Route path="/dialogs/*" element={<Dialogs data={props.data}/>}/>
             </Routes>
         </main>
     );

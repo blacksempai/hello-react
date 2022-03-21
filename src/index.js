@@ -5,10 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
+let data = [
+  {author:"Anya", content:"Hi!"},
+  {author:"Andrey", content:"Hello!"},
+  {author:"Andrey", content:"How Are U?"}
+]
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <App data={data} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

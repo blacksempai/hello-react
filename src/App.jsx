@@ -4,7 +4,7 @@ import Header from './components/header/Header';
 import Navigation from './components/navigation/Navigation'
 import { BrowserRouter } from 'react-router-dom';
 
-const App = () => {
+const App = (props) => {
   return (
       <div className="App" style={{
         backgroundImage: `url(${process.env.PUBLIC_URL + '/background.jpg'})`,
@@ -13,7 +13,7 @@ const App = () => {
         <div className="container">
           <Header />
           <Navigation />
-          <Content />
+          <Content data={props.data}/>
         </div>
       </div>
   );
