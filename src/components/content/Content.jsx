@@ -7,7 +7,7 @@ const Content = (props) => {
     return (
         <main className={classes.main}>
             <Routes>
-                <Route path="/profile" element={<Profile state={props.state.profilePage}/>}/>
+                <Route path="/profile" element={<Profile state={props.state.profilePage} addPost={props.addPost} changeNewPostText={props.changeNewPostText} addLike={props.addLike}/>}/>
                 <Route path="/dialogs/*" element={<Dialogs state={props.state.dialogPage}/>}/>
             </Routes>
         </main>

@@ -7,8 +7,8 @@ const Messange = (props) => {
                 <img src="http://placekitten.com/g/50/50" alt="ava" />
                 <p>{props.author}</p>
             </div>    
-            <div className={classes.content}>
-                <p>{props.content}</p>
+            <div className={classes.text}>
+                <p>{props.text}</p>
             </div>
         </div>
     ); 

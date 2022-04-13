@@ -5,8 +5,8 @@ import PostForm from './post-form/PostForm';
 const Posts = (props) => {
     return (
         <div>
-            <PostForm />
-            <PostList posts={props.posts}/>
+            <PostForm addPost={props.addPost} changeNewPostText={props.changeNewPostText} newPostText={props.state.newPostText}/>
+            <PostList posts={props.state.posts} addLike={props.addLike}/>
         </div>
     );
 }

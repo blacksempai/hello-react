@@ -12,7 +12,7 @@ const App = (props) => {
         <div className="container">
           <Header />
           <Navigation />
-          <Content state={props.state}/>
+          <Content state={props.state} addPost={props.addPost}  changeNewPostText={props.changeNewPostText} addLike={props.addLike} />
         </div>
       </div>
   );
