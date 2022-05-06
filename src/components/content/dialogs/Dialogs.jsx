@@ -6,7 +6,7 @@ const Dialogs = (props) => {
     return (
         <div className={classes.dialogs_grid}>
             <DialogList dialogs={props.state.dialogs}/>
-            <Messanges messanges={props.state.messanges}/>
+            <Messanges messanges={props.state.messanges} newMessageText={props.state.newMessageText} dispatch={props.dispatch}/>
         </div>
     );
 }

@@ -1,15 +1,18 @@
 import React from 'react';
 import classes from './PostForm.module.css';
+import { addPostActionCreator, changeNewPostTextActionCreator } from '../../../../../redux/profilePageReducer';
 
 const PostForm = (props) => {
     const postRef = React.createRef();
     const textChanged = () => {
         let text = postRef.current.value;
-        props.changeNewPostText(text);
+        let action = changeNewPostTextActionCreator(text);
+        props.dispatch(action);
     }
     const addPost = (e) => {
         e.preventDefault();
-        props.addPost();
+        let action = addPostActionCreator();
+        props.dispatch(action);
     }
 
     return (
