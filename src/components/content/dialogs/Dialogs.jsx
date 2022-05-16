@@ -1,12 +1,12 @@
-import DialogList from './dialog-list/DialogList';
 import classes from './Dialogs.module.css';
-import Messanges from './messanges/Messages';
+import DialogListContainer from './dialog-list/DialogListContainer';
+import MessangesContainer from './messanges/MessangesContainer';
 
 const Dialogs = (props) => {
     return (
         <div className={classes.dialogs_grid}>
-            <DialogList dialogs={props.state.dialogs}/>
-            <Messanges messanges={props.state.messanges} newMessageText={props.state.newMessageText} dispatch={props.dispatch}/>
+            <DialogListContainer />
+            <MessangesContainer />
         </div>
     );
 }

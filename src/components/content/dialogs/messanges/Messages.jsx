@@ -9,7 +9,7 @@ const Messanges = (props) => {
             <div className={classes.messanges}>
                 {messangeItems}
             </div>
-            <MessageForm newMessageText={props.newMessageText} dispatch={props.dispatch}/>
+            <MessageForm newMessageText={props.newMessageText} changeText={props.changeText} addMessage={props.addMessage}/>
         </div>
     );
 }

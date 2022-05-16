@@ -1,12 +1,12 @@
 import classes from './Posts.module.css';
-import PostList from './post-list/PostList';
-import PostForm from './post-form/PostForm';
+import PostFormContainer from './post-form/PostFormContainer';
+import PostListContainer from './post-list/PostListContainer';
 
 const Posts = (props) => {
     return (
         <div>
-            <PostForm dispatch={props.dispatch} newPostText={props.state.newPostText}/>
-            <PostList posts={props.state.posts} dispatch={props.dispatch}/>
+            <PostFormContainer />
+            <PostListContainer />
         </div>
     );
 }

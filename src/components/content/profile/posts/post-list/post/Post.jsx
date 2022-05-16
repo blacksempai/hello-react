@@ -1,12 +1,10 @@
 import classes from './Post.module.css';
 import ava from '../../../profile-info/Cat03.jpg'
-import {addLikeActionCreator} from '../../../../../../redux/profilePageReducer'
 
 const Post = (props) => {
 
     const like = () => {
-        let action = addLikeActionCreator(props.id);
-        props.dispatch(action);
+        props.like(props.id);
     }
 
     return (

@@ -7,8 +7,8 @@ const Content = (props) => {
     return (
         <main className={classes.main}>
             <Routes>
-                <Route path="/profile" element={<Profile state={props.state.profilePage} dispatch={props.dispatch}/>}/>
-                <Route path="/dialogs/*" element={<Dialogs state={props.state.dialogPage} dispatch={props.dispatch}/>}/>
+                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/dialogs/*" element={<Dialogs/>}/>
             </Routes>
         </main>
     );

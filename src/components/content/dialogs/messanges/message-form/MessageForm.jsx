@@ -1,19 +1,18 @@
 import React from 'react';
 import classes from './MessageForm.module.css';
 import sendImg from './send.png';
-import { addMessageActionCreator, changeNewMessageTextActionCreator } from './../../../../../redux/dialogPageReducer';
 
 const MessageForm = (props) => {
     const messageRef = React.createRef();
 
     const messageSubmit = (e) => {
         e.preventDefault();
-        props.dispatch(addMessageActionCreator());
+        props.addMessage();
     }
 
     const textChanged = () => {
         let text = messageRef.current.value;
-        props.dispatch(changeNewMessageTextActionCreator(text));
+        props.changeText(text);
     }
 
     return (
