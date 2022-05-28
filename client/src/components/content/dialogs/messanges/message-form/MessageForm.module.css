@@ -1,13 +1,12 @@
 .messageFormWrapper {
-    position: relative;
-    background-color: #ffffff;
+    position: sticky;
     bottom: 0;
 }
 
 .messageFormWrapper form {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 2rem;
     gap: 1rem;
 }
 
