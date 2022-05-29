@@ -8,7 +8,8 @@ const userSchema = new Schema({
     city: {type: String},
     education: {type: String},
     site: {type: String},
-    photoURL: {type: String}
+    photoURL: {type: String},
+    sex: {type: String, enum : ['M','W'], required: true }
 });
 
 module.exports = model('User', userSchema);

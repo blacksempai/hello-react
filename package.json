@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/blacksempai/hello-react#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "concurrently": "^7.2.1",
     "config": "^3.3.7",
     "express": "^4.18.1",
