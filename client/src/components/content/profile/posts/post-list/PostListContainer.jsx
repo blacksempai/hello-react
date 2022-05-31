@@ -1,17 +1,11 @@
 import { connect } from 'react-redux';
-import { addLikeActionCreator } from '../../../../../redux/profilePageReducer';
 import PostList from './PostList';
+import { addLike } from '../../../../../redux/profilePageReducer';
 
 const mapStateToProps = (state) => {
-    return { posts: state.profilePage.posts }
+    return { posts: state.profilePage.profile.posts }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        like: (id) => dispatch(addLikeActionCreator(id))
-    }
-}
-
-const PostListContainer = connect(mapStateToProps, mapDispatchToProps)(PostList)
+const PostListContainer = connect(mapStateToProps, { addLike })(PostList)
 
 export default PostListContainer;

@@ -1,12 +1,14 @@
 const SET_USERS = 'SET_USERS';
 const DATE = 'DATE';
 const CHANGE_PAGE = 'CHANGE_PAGE';
+const SET_FETCHING = 'SET_FETCHING';
 
 let initialState = {
     users: [],
     total: 0,
     limit: 3,
-    currentPage: 0
+    currentPage: 0,
+    isFetching: false
 }
 
 const datingReducer = (state = initialState, action) => {
@@ -27,6 +29,11 @@ const datingReducer = (state = initialState, action) => {
                 ...state,
                 currentPage: action.page
             }
+        case SET_FETCHING:
+            return {
+                ...state,
+                isFetching: action.isFetching
+            }
 
         default: 
             return state;
@@ -35,14 +42,18 @@ const datingReducer = (state = initialState, action) => {
 
 export default datingReducer;
 
-export const setUsersActionCreator = (users, total) => {
+export const setUsers = (users, total) => {
     return { type: SET_USERS, users, total}
 }
 
-export const dateUserActionCreator = (id) => {
+export const dateUser = (id) => {
     return { type: DATE, id}
 }
 
-export const changePageActionCreator = (page) => {
+export const changePage = (page) => {
     return { type: CHANGE_PAGE, page }
+}
+
+export const setFetching = (isFetching) => {
+    return { type: SET_FETCHING, isFetching }
 }

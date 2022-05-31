@@ -13,11 +13,17 @@
 }
 
 #post_submit {
-    background-color: palevioletred;
-    border: none;
+    background: none;
+    border: 2px solid #000000;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ffffff;
-    padding: 0.3rem 0.8rem;
+    color: #000000;
+    padding: 0.2rem 0.6rem;
     float: right;
+}
+
+#post_submit:hover {
+    background: #d87093;
+    border-color: palevioletred;
+    color: #ffffff;
 }

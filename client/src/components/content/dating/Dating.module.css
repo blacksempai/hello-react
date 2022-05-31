@@ -2,16 +2,16 @@
     padding: 1rem;
 }
 
-.dating h1 {
+.dating h2 {
     padding: 0;
     margin: 0;
 }
 
 .datingGrid {
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding: 1rem;
 }
 
 .active {

@@ -5,7 +5,7 @@ const PostForm = (props) => {
     const postRef = React.createRef();
     const textChanged = () => {
         let text = postRef.current.value;
-        props.textChanged(text);
+        props.changeNewPostText(text);
     }
     const addPost = (e) => {
         e.preventDefault();

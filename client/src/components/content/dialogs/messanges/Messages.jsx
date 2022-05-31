@@ -3,7 +3,7 @@ import Messange from './message/Message';
 import MessageForm from './message-form/MessageForm';
 
 const Messanges = (props) => {
-    let messangeItems = props.messanges.map(msg => <Messange author={msg.author} text={msg.text} />);
+    let messangeItems = props.messanges.map(msg => <Messange key={msg.id} author={msg.author} text={msg.text} />);
     return (
         <div className={classes.messagesContainer}>
             <div className={classes.messanges}>

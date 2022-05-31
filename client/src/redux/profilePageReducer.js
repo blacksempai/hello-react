@@ -1,19 +1,32 @@
 const ADD_POST = 'ADD_POST';
 const CHANGE_NEW_POST_TEXT = 'CHANGE_NEW_POST_TEXT';
 const ADD_LIKE = 'ADD_LIKE';
+const SET_STATE = 'SET_STATE';
+const SET_FETCHING = 'SET_FETCHING';
 
-export const addPostActionCreator = () => ({type: ADD_POST});
-export const addLikeActionCreator = (id) => ({type: ADD_LIKE, id: id});
-export const changeNewPostTextActionCreator = (text) => ({type: CHANGE_NEW_POST_TEXT, text: text});
+export const addPost = () => ({type: ADD_POST});
+export const addLike = (id) => ({type: ADD_LIKE, id: id});
+export const changeNewPostText = (text) => ({type: CHANGE_NEW_POST_TEXT, text: text});
+export const setState = (state) => ({type: SET_STATE, state});
+export const setFetching = (isFetching) => ({type: SET_FETCHING, isFetching});
 
 let initialState = {
-    posts:  [
-        {id:0, text:":33 OwO", likes: 0},
-        {id:1, text:"The tuna is a sleek and streamlined fish, adapted for speed. It has two closely spaced dorsal fins on its back; VERYYYY TAAASSSTYYY!! MEUW", likes: 8},
-        {id:2, text:"First Post", likes: 3}
-    ],
-    newPostText: ''
+    _id: '',
+    email: '',
+    name: '',
+    photoURL: '',
+    sex: '',
+    profile: {
+        birthDate: '',
+        city: '',
+        education: '',
+        site: '',
+        posts: []
+    },
+    newPostText: '',
+    isFetching: false
 }
+
 
 const profilePageReducer = (state = initialState, action) => {
     switch(action.type) {
@@ -26,14 +39,33 @@ const profilePageReducer = (state = initialState, action) => {
         case ADD_POST: 
         return {
             ...state,
-            posts: [...state.posts, {id: state.posts.length, text: state.newPostText, likes: 0}],
+            profile: {
+                ...state.profile,
+                posts: [...state.profile.posts, {id: state.profile.posts.length, text: state.newPostText, likes: []}]
+            },
             newPostText: ''
         } 
 
         case ADD_LIKE: 
+        console.log(state);
         return {
             ...state,
-            posts: state.posts.map(p => p.id === action.id ? {id:p.id, text: p.text, likes: p.likes+1} : p)
+            profile: {
+                ...state.profile,
+                posts: state.profile.posts.map(p => p._id === action.id ? {...p, likes: [...p.likes,'placeholder']} : p)
+            }
+        }
+
+        case SET_STATE: 
+        return {
+            ...state,
+            ...action.state
+        }
+
+        case SET_FETCHING:
+        return {
+            ...state,
+            isFetching: action.isFetching
         }
 
         default: return state;

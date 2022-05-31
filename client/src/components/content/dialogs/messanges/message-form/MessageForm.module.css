@@ -28,3 +28,7 @@
 .sendButton img {
     height: 100%;
 }
+
+.sendButton img:hover {
+    filter: invert(61%) sepia(6%) saturate(4301%) hue-rotate(291deg) brightness(90%) contrast(87%);
+}

@@ -7,7 +7,7 @@ router.get('/', async (req,res) => {
         let page = parseInt(req.query.page, 10) || 0;
         let limit = parseInt(req.query.limit, 10) || 3;
         
-        const users = await User.find().skip(page*limit).limit(limit);
+        const users = await User.find().skip(page*limit).limit(limit).select(['-password']);
 
         let total = await User.countDocuments();
 
@@ -20,7 +20,5 @@ router.get('/', async (req,res) => {
         return res.status(500).json({message: 'Internal Server Error'});
     }    
 })
-
-
 
 module.exports = router;

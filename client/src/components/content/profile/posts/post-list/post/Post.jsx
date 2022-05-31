@@ -2,9 +2,8 @@ import classes from './Post.module.css';
 import ava from '../../../profile-info/Cat03.jpg'
 
 const Post = (props) => {
-
     const like = () => {
-        props.like(props.id);
+        props.addLike(props.id);
     }
 
     return (
@@ -12,7 +11,7 @@ const Post = (props) => {
             <img src={ava} alt="ava" />
             <div className={classes.text}>
                 <p>{props.text}</p>
-                <div><button onClick={like}>👍</button><span>{props.likes}</span></div>    
+                <div><button onClick={like}>👍</button><span>{props.likes.length}</span></div>    
             </div>
 
         </div>
