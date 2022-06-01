@@ -1,3 +1,4 @@
+import { usersAPI } from './../api/users-api';
 const SET_USERS = 'SET_USERS';
 const DATE = 'DATE';
 const CHANGE_PAGE = 'CHANGE_PAGE';
@@ -56,4 +57,16 @@ export const changePage = (page) => {
 
 export const setFetching = (isFetching) => {
     return { type: SET_FETCHING, isFetching }
+}
+
+export const getUsers = (page = 0) => {
+    return (dispatch) => {
+        dispatch(setFetching(true));
+        dispatch(changePage(page));
+        usersAPI.getUsers(page)
+        .then((data)=> {
+            dispatch(setUsers(data.users, data.total));
+            dispatch(setFetching(false));
+        })
+    }
 }

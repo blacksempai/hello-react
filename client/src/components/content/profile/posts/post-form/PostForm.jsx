@@ -14,7 +14,7 @@ const PostForm = (props) => {
 
     return (
         <div className={classes.post_form}>
-            <h2>My Posts</h2>
+            <h2>Posts</h2>
             <form onSubmit={addPost}>
                 <textarea onChange={textChanged} name="post" id={classes.post} rows="4" placeholder="your news..." ref={postRef} value={props.newPostText}></textarea>
                 <input id={classes.post_submit} type="submit" value="Send"/>

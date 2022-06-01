@@ -3,7 +3,7 @@ import PostList from './PostList';
 import { addLike } from '../../../../../redux/profilePageReducer';
 
 const mapStateToProps = (state) => {
-    return { posts: state.profilePage.profile.posts }
+    return { posts: state.profilePage.posts }
 }
 
 const PostListContainer = connect(mapStateToProps, { addLike })(PostList)

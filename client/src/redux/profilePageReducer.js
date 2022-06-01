@@ -1,3 +1,5 @@
+import { profileAPI } from './../api/profile-api';
+
 const ADD_POST = 'ADD_POST';
 const CHANGE_NEW_POST_TEXT = 'CHANGE_NEW_POST_TEXT';
 const ADD_LIKE = 'ADD_LIKE';
@@ -10,19 +12,29 @@ export const changeNewPostText = (text) => ({type: CHANGE_NEW_POST_TEXT, text: t
 export const setState = (state) => ({type: SET_STATE, state});
 export const setFetching = (isFetching) => ({type: SET_FETCHING, isFetching});
 
+export const setProfile = (id) => {
+    return (dispatch) => {
+        dispatch(setFetching(true));
+        let userId = id || '62929faf686f20a022b511a4';
+        profileAPI.getProfile(userId)
+        .then((data)=>{
+            dispatch(setState(data));
+            dispatch(setFetching(false));
+        })
+    }
+}
+
 let initialState = {
     _id: '',
     email: '',
     name: '',
     photoURL: '',
     sex: '',
-    profile: {
-        birthDate: '',
-        city: '',
-        education: '',
-        site: '',
-        posts: []
-    },
+    birthDate: '',
+    city: '',
+    education: '',
+    site: '',
+    posts: [],
     newPostText: '',
     isFetching: false
 }
@@ -39,10 +51,7 @@ const profilePageReducer = (state = initialState, action) => {
         case ADD_POST: 
         return {
             ...state,
-            profile: {
-                ...state.profile,
-                posts: [...state.profile.posts, {id: state.profile.posts.length, text: state.newPostText, likes: []}]
-            },
+            posts: [...state.posts, {id: state.posts.length, text: state.newPostText, likes: []}],
             newPostText: ''
         } 
 
@@ -50,15 +59,13 @@ const profilePageReducer = (state = initialState, action) => {
         console.log(state);
         return {
             ...state,
-            profile: {
-                ...state.profile,
-                posts: state.profile.posts.map(p => p._id === action.id ? {...p, likes: [...p.likes,'placeholder']} : p)
-            }
+            posts: state.posts.map(p => p._id === action.id ? {...p, likes: [...p.likes,'placeholder']} : p)
         }
 
         case SET_STATE: 
         return {
             ...state,
+            photoURL: null,
             ...action.state
         }
 

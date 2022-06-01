@@ -14,6 +14,24 @@
     gap: 1rem;
 }
 
-.active {
-    background-color: pink;
+.pageSwitcher {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
 }
+
+.pageSwitcher button {
+    background: none;
+    padding: 0.2rem 0.5rem;
+}
+
+.pageSwitcher button.active {
+    background: palevioletred;
+    font-weight: bold;
+}
+
+.pageSwitcher button:hover {
+    background: palevioletred;
+}
+

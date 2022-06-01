@@ -1,40 +1,22 @@
 import { Component } from "react";
 import { connect } from 'react-redux';
-import { changePage, setUsers, dateUser, setFetching }  from '../../../redux/datingPageReducer';
+import { dateUser,  getUsers }  from '../../../redux/datingPageReducer';
 import Dating from './Dating';
-import axios from "axios";
-
 
 class DatingContainer extends Component {
 
     componentDidMount() {
-        this.props.setFetching(true);
-        axios.get(`/api/users`)
-        .then((res)=> {
-            this.props.setUsers(res.data.users, res.data.total);
-            this.props.setFetching(false);
-        })
+        this.props.getUsers();
     }
 
     changePage = (page) => {
-        this.props.setFetching(true);
-        this.props.changePage(page);
-        axios.get(`/api/users?page=${page}`)
-        .then((res)=> {
-            this.props.setUsers(res.data.users, res.data.total);
-            this.props.setFetching(false);
-        })
+        this.props.getUsers(page);
     }
 
     render() { 
         return <Dating 
-            total={this.props.total}
-            users={this.props.users}
-            limit={this.props.limit}
-            currentPage={this.props.currentPage}
+            {...this.props}
             changePage={this.changePage}
-            dateUser={this.props.dateUser}
-            isFetching={this.props.isFetching}
         />
     }
 }
@@ -50,4 +32,4 @@ let mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps,{ setUsers, changePage, dateUser, setFetching })(DatingContainer);;
+export default connect(mapStateToProps,{ getUsers, dateUser })(DatingContainer);;

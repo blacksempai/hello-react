@@ -7,9 +7,10 @@
 }
 
 .userPhotoContainer img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .userInfoContainer {
@@ -18,4 +19,24 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+.userBadge button {
+    background: none;
+    border: 2px #000000 solid;
+    font-size: 1.5rem;
+    padding: 0.2rem 0.8rem;
+    font-weight: bold;
+}
+
+.userBadge button:hover {
+    background: palevioletred;
+    border-color: palevioletred;
+    color: #ffffff;
+}
+
+.userBadge button:disabled {
+    background: none;
+    border-color: grey;
+    color: grey;
 }
