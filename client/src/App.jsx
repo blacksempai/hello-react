@@ -1,14 +1,14 @@
 import './App.css';
-import Content from './components/content/Content';
+import ContentContainer from './components/content/ContentContainer';
 import Header from './components/header/Header';
-import Navigation from './components/navigation/Navigation'
+import NavigationContainer from './components/navigation/NavigationContainer';
 
 const App = (props) => {
   return (
       <div className="container">
         <Header />
-        <Navigation />
-        <Content/>
+        <NavigationContainer />
+        <ContentContainer/>
       </div>
   );
 }

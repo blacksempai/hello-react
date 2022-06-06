@@ -1,4 +1,5 @@
 {
     "port": "5000",
+    "jwtSecret": "russian warship fuck yourself",
     "mongoURI": "mongodb+srv://root:root@cluster0.lwwnogz.mongodb.net/?retryWrites=true&w=majority"
 }

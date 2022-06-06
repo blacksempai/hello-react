@@ -1,7 +1,19 @@
 import { NavLink } from 'react-router-dom';
 import classes from './Navigation.module.css';
 
-const Header = () => {
+const Navigation = (props) => {
+
+    if(!props.isAuthenticated) {
+        return (
+            <nav className={classes.nav}>
+                <ul>
+                    <li><NavLink to="/login" className={({ isActive }) => isActive? classes.active: ''}>Login</NavLink></li>
+                    <li><NavLink to="/register" className={({ isActive }) => isActive? classes.active: ''}>Register</NavLink></li>
+                </ul>
+            </nav>
+        )
+    }
+
     return (
             <nav className={classes.nav}>
                 <ul>
@@ -15,4 +27,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default Navigation;

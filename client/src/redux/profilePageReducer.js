@@ -13,9 +13,9 @@ export const setState = (state) => ({type: SET_STATE, state});
 export const setFetching = (isFetching) => ({type: SET_FETCHING, isFetching});
 
 export const setProfile = (id) => {
-    return (dispatch) => {
+    return (dispatch, getState) => {
         dispatch(setFetching(true));
-        let userId = id || '62929faf686f20a022b511a4';
+        let userId = id || getState().auth.userId;
         profileAPI.getProfile(userId)
         .then((data)=>{
             dispatch(setState(data));
@@ -64,8 +64,6 @@ const profilePageReducer = (state = initialState, action) => {
 
         case SET_STATE: 
         return {
-            ...state,
-            photoURL: null,
             ...action.state
         }
 

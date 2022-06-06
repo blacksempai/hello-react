@@ -9,7 +9,8 @@ let initialState = {
     total: 0,
     limit: 3,
     currentPage: 0,
-    isFetching: false
+    isFetching: false,
+    followingInProgress: []
 }
 
 const datingReducer = (state = initialState, action) => {

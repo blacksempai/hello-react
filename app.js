@@ -1,10 +1,14 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
 const config = require('config');
+const auth = require('./middleware/auth.middleware');
 const PORT = config.get('port') || 5000;
 
-app.use('/api/users', require('./routes/users_routes'));
-app.use('/api/profile', require('./routes/profile_routes'));
+app.use(express.json());
+app.use('/api/users', auth, require('./routes/users_routes'));
+app.use('/api/profile', auth, require('./routes/profile_routes'));
+app.use('/api/auth', require('./routes/auth_routes'));
 
 async function start() {
     try {
